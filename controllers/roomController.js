@@ -1,6 +1,4 @@
 const { Room } = require("../models")
-const room = require("../models/room")
-const user = require("../models/user")
 
 module.exports = {
     createRoom : (req, res) => {
