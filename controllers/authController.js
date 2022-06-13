@@ -18,13 +18,17 @@ module.exports = {
         try{
             User.register(req.body)
             .then(() => {
-                res.send(respon={
+                res.send( respon = {
                     "status" : 201,
-                    "message" : "registrasi berhasil"
+                    "message" : "registrasi berhasil silahkan login"
                 })
             })
         }catch(err){
-            res.send(err.message, 422)
+            res.send( respon = {
+                "status" : 422,
+                "error" : err.message,
+                "message" : "periksa kembali data anda"
+            })
         }
     },
     login: (req, res) => {
