@@ -5,6 +5,7 @@ const PORT = 3000
 app.use(express.urlencoded({extended: false}))
 
 app.set('view engine', 'ejs')
+app.use(express.static(__dirname + '/public'));
 
 const router = require('./router')
 app.use(router)
